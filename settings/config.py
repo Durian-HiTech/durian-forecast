@@ -6,8 +6,8 @@ import os
 ## App settings
 name = "Durian Covid 预测"
 
-# host = "0.0.0.0"
-host = "localhost"
+host = "0.0.0.0"
+# host = "localhost"
 
 port = int(os.environ.get("PORT", 5000))
 
