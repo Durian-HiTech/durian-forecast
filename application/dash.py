@@ -160,16 +160,16 @@ def render_output_panel(country):
                 [
                     html.H4("截止到当日的累计确诊数：", className="card-title"),
                     html.H4("{:,.0f}".format(total_cases_until_today), className="card-subtitle"),
-
+                    html.Br(),
                     html.H4("最近30天内的累计确诊数：", className="card-title"),
                     html.H4("{:,.0f}".format(total_cases_in_30days), className="card-subtitle"),
-
+                    html.Br(),
                     html.H4("今日活跃病例数：", className="card-title"),
                     html.H4("{:,.0f}".format(active_cases_today), className="card-subtitle"),
-
+                    html.Br(),
                     html.H4("近30天内的活跃病例数：", className="card-title"),
                     html.H4("{:,.0f}".format(active_cases_in_30days), className="card-subtitle"),
-
+                    html.Br(),
                     html.H4("峰值新增日：", className="card-title"),
                     html.H4(peak_day.strftime("%Y-%m-%d"), className="card-subtitle"),
                     html.P(
