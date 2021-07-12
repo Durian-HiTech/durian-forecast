@@ -4,9 +4,10 @@ import os
 
 
 ## App settings
-name = "Virus Forecaster"
+name = "Durian Covid 预测"
 
-host = "0.0.0.0"
+# host = "0.0.0.0"
+host = "localhost"
 
 port = int(os.environ.get("PORT", 5000))
 
