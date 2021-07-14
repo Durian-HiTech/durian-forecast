@@ -30,21 +30,6 @@ app.title = config.name
 
 # Navbar
 navbar = dbc.Nav(className="nav nav-pills", children=[
-    ## logo/home
-    # dbc.NavItem(html.Img(src=app.get_asset_url("logo.png"), height="40px")),
-    ## about
-    # dbc.NavItem(html.Div([
-    #     dbc.NavLink("About", href="/", id="about-popover", active=False),
-    #     dbc.Popover(id="about", is_open=False, target="about-popover", children=[
-    #         dbc.PopoverHeader("How it works"), dbc.PopoverBody(about.txt)
-    #     ])
-    # ])),
-    ## links
-    # dbc.DropdownMenu(label="Links", nav=True, children=[
-    #     dbc.DropdownMenuItem([html.I(className="fa fa-linkedin"), "  Contacts"], href=config.contacts, target="_blank"), 
-    #     dbc.DropdownMenuItem([html.I(className="fa fa-github"), "  Code"], href=config.code, target="_blank"),
-    #     dbc.DropdownMenuItem([html.I(className="fa fa-medium"), "  Tutorial"], href=config.tutorial, target="_blank")
-    # ])
 ])
 
 
@@ -136,25 +121,7 @@ def render_output_panel(country):
     peak_color = "white" if model.today > peak_day else "red"
     panel = html.Div([
         html.H4(country),
-        # dbc.Card(body=True, className="text-white bg-primary", children=[
-            
-        #     html.H6("截止到当日的累计确诊数：", style={"color":"white"}),
-        #     html.H3("{:,.0f}".format(total_cases_until_today), style={"color":"white"}),
-            
-        #     html.H6("最近30天内的累计确诊数：", className="text-danger"),
-        #     html.H3("{:,.0f}".format(total_cases_in_30days), className="text-danger"),
-            
-        #     html.H6("今日活跃病例数：", style={"color":"white"}),
-        #     html.H3("{:,.0f}".format(active_cases_today), style={"color":"white"}),
-            
-        #     html.H6("近30天内的活跃病例数：", className="text-danger"),
-        #     html.H3("{:,.0f}".format(active_cases_in_30days), className="text-danger"),
-            
-        #     html.H6("峰值新增日：", style={"color":peak_color}),
-        #     html.H3(peak_day.strftime("%Y-%m-%d"), style={"color":peak_color}),
-        #     html.H6("当日含 {:,.0f} 个病例".format(num_max), style={"color":peak_color})
-        
-        # ]),
+
         dbc.Card(
             dbc.CardBody(
                 [
